@@ -30,6 +30,7 @@ jobs:
       - id: get_step
         run: |
           echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
+          echo "Current branch: $(git branch --show-current)"
     outputs:
       current_step: ${{ steps.get_step.outputs.current_step }}
 
